@@ -20,6 +20,6 @@ public class JokeController {
     @RequestMapping(value = "/api/joke", method = RequestMethod.GET)
     public String findOneCity() {
         String json = JSON.toJSONString(jokeService.findByRandom());
-        return json;
+        return "successCallback("+json+")";
     }
 }
